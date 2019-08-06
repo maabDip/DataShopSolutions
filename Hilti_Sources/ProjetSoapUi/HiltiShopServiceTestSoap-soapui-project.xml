@@ -1,0 +1,138 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<con:soapui-project id="6c937a2a-cafa-4e2b-bcd2-263af952927c" activeEnvironment="Default" name="HiltiShopServiceTestSoap" resourceRoot="" soapui-version="5.5.0" xmlns:con="http://eviware.com/soapui/config"><con:settings/><con:interface xsi:type="con:WsdlInterface" id="d013181b-5cc0-447b-99c3-d3e39211cc7f" wsaVersion="NONE" name="HilitShopService.HiltiShopService" type="wsdl" bindingName="{http://tempuri.org/}HilitShopService.HiltiShopService" soapVersion="1_1" anonymous="optional" definition="http://localhost:52521/HiltiShopService.svc?singleWsdl" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"><con:settings/><con:definitionCache type="TEXT" rootPart="http://localhost:52521/HiltiShopService.svc?singleWsdl"><con:part><con:url>http://localhost:52521/HiltiShopService.svc?singleWsdl</con:url><con:content><![CDATA[<wsdl:definitions name="HiltiShopService" targetNamespace="http://tempuri.org/" xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/" xmlns:wsap="http://schemas.xmlsoap.org/ws/2004/08/addressing/policy" xmlns:wsa10="http://www.w3.org/2005/08/addressing" xmlns:tns="http://tempuri.org/" xmlns:msc="http://schemas.microsoft.com/ws/2005/12/wsdl/contract" xmlns:soapenc="http://schemas.xmlsoap.org/soap/encoding/" xmlns:wsx="http://schemas.xmlsoap.org/ws/2004/09/mex" xmlns:soap="http://schemas.xmlsoap.org/wsdl/soap/" xmlns:wsam="http://www.w3.org/2007/05/addressing/metadata" xmlns:wsa="http://schemas.xmlsoap.org/ws/2004/08/addressing" xmlns:wsp="http://schemas.xmlsoap.org/ws/2004/09/policy" xmlns:wsaw="http://www.w3.org/2006/05/addressing/wsdl" xmlns:soap12="http://schemas.xmlsoap.org/wsdl/soap12/" xmlns:wsu="http://docs.oasis-open.org/wss/2004/01/oasis-200401-wss-wssecurity-utility-1.0.xsd" xmlns:xsd="http://www.w3.org/2001/XMLSchema">
+  <wsdl:types>
+    <xs:schema elementFormDefault="qualified" targetNamespace="http://tempuri.org/" xmlns:xs="http://www.w3.org/2001/XMLSchema">
+      <xs:import namespace="http://schemas.datacontract.org/2004/07/HiltiShopDataContract.DataContract"/>
+      <xs:import namespace="http://schemas.datacontract.org/2004/07/HiltiShopDataContract"/>
+      <xs:element name="GetDataResponse">
+        <xs:complexType>
+          <xs:sequence>
+            <xs:element minOccurs="0" name="Anomaly" nillable="true" type="q1:Anomaly" xmlns:q1="http://schemas.datacontract.org/2004/07/HiltiShopDataContract.DataContract"/>
+            <xs:element minOccurs="0" name="ListOfDataShop" nillable="true" type="q2:ArrayOfDataShop" xmlns:q2="http://schemas.datacontract.org/2004/07/HiltiShopDataContract"/>
+            <xs:element minOccurs="0" name="ReturnCode" nillable="true" type="xs:string"/>
+          </xs:sequence>
+        </xs:complexType>
+      </xs:element>
+    </xs:schema>
+    <xs:schema attributeFormDefault="qualified" elementFormDefault="qualified" targetNamespace="http://schemas.microsoft.com/2003/10/Serialization/" xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:tns="http://schemas.microsoft.com/2003/10/Serialization/">
+      <xs:element name="anyType" nillable="true" type="xs:anyType"/>
+      <xs:element name="anyURI" nillable="true" type="xs:anyURI"/>
+      <xs:element name="base64Binary" nillable="true" type="xs:base64Binary"/>
+      <xs:element name="boolean" nillable="true" type="xs:boolean"/>
+      <xs:element name="byte" nillable="true" type="xs:byte"/>
+      <xs:element name="dateTime" nillable="true" type="xs:dateTime"/>
+      <xs:element name="decimal" nillable="true" type="xs:decimal"/>
+      <xs:element name="double" nillable="true" type="xs:double"/>
+      <xs:element name="float" nillable="true" type="xs:float"/>
+      <xs:element name="int" nillable="true" type="xs:int"/>
+      <xs:element name="long" nillable="true" type="xs:long"/>
+      <xs:element name="QName" nillable="true" type="xs:QName"/>
+      <xs:element name="short" nillable="true" type="xs:short"/>
+      <xs:element name="string" nillable="true" type="xs:string"/>
+      <xs:element name="unsignedByte" nillable="true" type="xs:unsignedByte"/>
+      <xs:element name="unsignedInt" nillable="true" type="xs:unsignedInt"/>
+      <xs:element name="unsignedLong" nillable="true" type="xs:unsignedLong"/>
+      <xs:element name="unsignedShort" nillable="true" type="xs:unsignedShort"/>
+      <xs:element name="char" nillable="true" type="tns:char"/>
+      <xs:simpleType name="char">
+        <xs:restriction base="xs:int"/>
+      </xs:simpleType>
+      <xs:element name="duration" nillable="true" type="tns:duration"/>
+      <xs:simpleType name="duration">
+        <xs:restriction base="xs:duration">
+          <xs:pattern value="\-?P(\d*D)?(T(\d*H)?(\d*M)?(\d*(\.\d*)?S)?)?"/>
+          <xs:minInclusive value="-P10675199DT2H48M5.4775808S"/>
+          <xs:maxInclusive value="P10675199DT2H48M5.4775807S"/>
+        </xs:restriction>
+      </xs:simpleType>
+      <xs:element name="guid" nillable="true" type="tns:guid"/>
+      <xs:simpleType name="guid">
+        <xs:restriction base="xs:string">
+          <xs:pattern value="[\da-fA-F]{8}-[\da-fA-F]{4}-[\da-fA-F]{4}-[\da-fA-F]{4}-[\da-fA-F]{12}"/>
+        </xs:restriction>
+      </xs:simpleType>
+      <xs:attribute name="FactoryType" type="xs:QName"/>
+      <xs:attribute name="Id" type="xs:ID"/>
+      <xs:attribute name="Ref" type="xs:IDREF"/>
+    </xs:schema>
+    <xs:schema elementFormDefault="qualified" targetNamespace="http://schemas.datacontract.org/2004/07/HiltiShopDataContract.DataContract" xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:tns="http://schemas.datacontract.org/2004/07/HiltiShopDataContract.DataContract">
+      <xs:complexType name="Anomaly">
+        <xs:sequence>
+          <xs:element minOccurs="0" name="Code" nillable="true" type="xs:string"/>
+          <xs:element minOccurs="0" name="Detail" nillable="true" type="xs:string"/>
+          <xs:element minOccurs="0" name="Label" nillable="true" type="xs:string"/>
+        </xs:sequence>
+      </xs:complexType>
+      <xs:element name="Anomaly" nillable="true" type="tns:Anomaly"/>
+    </xs:schema>
+    <xs:schema elementFormDefault="qualified" targetNamespace="http://schemas.datacontract.org/2004/07/HiltiShopDataContract" xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:tns="http://schemas.datacontract.org/2004/07/HiltiShopDataContract">
+      <xs:complexType name="ArrayOfDataShop">
+        <xs:sequence>
+          <xs:element minOccurs="0" maxOccurs="unbounded" name="DataShop" nillable="true" type="tns:DataShop"/>
+        </xs:sequence>
+      </xs:complexType>
+      <xs:element name="ArrayOfDataShop" nillable="true" type="tns:ArrayOfDataShop"/>
+      <xs:complexType name="DataShop">
+        <xs:sequence>
+          <xs:element minOccurs="0" name="CreatedOn" nillable="true" type="xs:string"/>
+          <xs:element minOccurs="0" name="CustomerId" type="xs:int"/>
+          <xs:element minOccurs="0" name="CustomerName" nillable="true" type="xs:string"/>
+          <xs:element minOccurs="0" name="ItemId" type="xs:int"/>
+          <xs:element minOccurs="0" name="ItemName" nillable="true" type="xs:string"/>
+          <xs:element minOccurs="0" name="Price" nillable="true" type="xs:string"/>
+          <xs:element minOccurs="0" name="Quantity" type="xs:int"/>
+          <xs:element minOccurs="0" name="ShopId" type="xs:int"/>
+          <xs:element minOccurs="0" name="ShopName" nillable="true" type="xs:string"/>
+        </xs:sequence>
+      </xs:complexType>
+      <xs:element name="DataShop" nillable="true" type="tns:DataShop"/>
+    </xs:schema>
+  </wsdl:types>
+  <wsdl:message name="IHiltiShopService_GetDataShop_InputMessage"/>
+  <wsdl:message name="GetDataResponse">
+    <wsdl:part name="parameters" element="tns:GetDataResponse"/>
+  </wsdl:message>
+  <wsdl:message name="IHiltiShopService_GetDataShopList_InputMessage"/>
+  <wsdl:portType name="IHiltiShopService">
+    <wsdl:operation name="GetDataShop">
+      <wsdl:input wsaw:Action="http://tempuri.org/IHiltiShopService/GetDataShop" message="tns:IHiltiShopService_GetDataShop_InputMessage"/>
+      <wsdl:output wsaw:Action="http://tempuri.org/IHiltiShopService/GetDataShopResponse" name="GetDataResponse" message="tns:GetDataResponse"/>
+    </wsdl:operation>
+    <wsdl:operation name="GetDataShopList">
+      <wsdl:input wsaw:Action="http://tempuri.org/IHiltiShopService/GetDataShopList" message="tns:IHiltiShopService_GetDataShopList_InputMessage"/>
+      <wsdl:output wsaw:Action="http://tempuri.org/IHiltiShopService/GetDataShopListResponse" name="GetDataResponse" message="tns:GetDataResponse"/>
+    </wsdl:operation>
+  </wsdl:portType>
+  <wsdl:binding name="HilitShopService.HiltiShopService" type="tns:IHiltiShopService">
+    <soap:binding transport="http://schemas.xmlsoap.org/soap/http"/>
+    <wsdl:operation name="GetDataShop">
+      <soap:operation soapAction="http://tempuri.org/IHiltiShopService/GetDataShop" style="document"/>
+      <wsdl:input>
+        <soap:body use="literal"/>
+      </wsdl:input>
+      <wsdl:output name="GetDataResponse">
+        <soap:body use="literal"/>
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetDataShopList">
+      <soap:operation soapAction="http://tempuri.org/IHiltiShopService/GetDataShopList" style="document"/>
+      <wsdl:input>
+        <soap:body use="literal"/>
+      </wsdl:input>
+      <wsdl:output name="GetDataResponse">
+        <soap:body use="literal"/>
+      </wsdl:output>
+    </wsdl:operation>
+  </wsdl:binding>
+  <wsdl:service name="HiltiShopService">
+    <wsdl:port name="HilitShopService.HiltiShopService" binding="tns:HilitShopService.HiltiShopService">
+      <soap:address location="http://localhost:52521/HiltiShopService.svc"/>
+    </wsdl:port>
+  </wsdl:service>
+</wsdl:definitions>]]></con:content><con:type>http://schemas.xmlsoap.org/wsdl/</con:type></con:part></con:definitionCache><con:endpoints><con:endpoint>http://localhost:52521/HiltiShopService.svc</con:endpoint></con:endpoints><con:operation id="bc0394ca-e0db-4047-857f-14ba0540ca3f" isOneWay="false" action="http://tempuri.org/IHiltiShopService/GetDataShop" name="GetDataShop" bindingOperationName="GetDataShop" type="Request-Response" outputName="GetDataResponse" inputName="" receivesAttachments="false" sendsAttachments="false" anonymous="optional"><con:settings/><con:call id="a7c674be-aac8-4dba-b22b-77b89c8bae3e" name="Request 1"><con:settings/><con:encoding>UTF-8</con:encoding><con:endpoint>http://localhost:52521/HiltiShopService.svc</con:endpoint><con:request>&lt;soapenv:Envelope xmlns:soapenv="http://schemas.xmlsoap.org/soap/envelope/">\r
+   &lt;soapenv:Header/>\r
+   &lt;soapenv:Body/>\r
+&lt;/soapenv:Envelope></con:request><con:wsaConfig mustUnderstand="NONE" version="200508" action="http://tempuri.org/IHiltiShopService/GetDataShop"/></con:call></con:operation><con:operation id="bc9f5f78-2841-465f-8793-eeaad83abcdd" isOneWay="false" action="http://tempuri.org/IHiltiShopService/GetDataShopList" name="GetDataShopList" bindingOperationName="GetDataShopList" type="Request-Response" outputName="GetDataResponse" inputName="" receivesAttachments="false" sendsAttachments="false" anonymous="optional"><con:settings/><con:call id="8871ef15-1c3d-4242-8b5c-60c2b8949c23" name="Request 1"><con:settings><con:setting id="com.eviware.soapui.impl.wsdl.WsdlRequest@request-headers">&lt;xml-fragment/></con:setting></con:settings><con:encoding>UTF-8</con:encoding><con:endpoint>http://localhost:52521/HiltiShopService.svc</con:endpoint><con:request>&lt;soapenv:Envelope xmlns:soapenv="http://schemas.xmlsoap.org/soap/envelope/">\r
+   &lt;soapenv:Header/>\r
+   &lt;soapenv:Body/>\r
+&lt;/soapenv:Envelope></con:request><con:credentials><con:authType>No Authorization</con:authType></con:credentials><con:jmsConfig JMSDeliveryMode="PERSISTENT"/><con:jmsPropertyConfig/><con:wsaConfig mustUnderstand="NONE" version="200508" action="http://tempuri.org/IHiltiShopService/GetDataShopList"/><con:wsrmConfig version="1.2"/></con:call></con:operation></con:interface><con:properties/><con:wssContainer/><con:oAuth2ProfileContainer/><con:oAuth1ProfileContainer/></con:soapui-project>
